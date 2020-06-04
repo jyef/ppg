@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ppg</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .screen {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            background-color: #ddd;
+            overflow: hidden;
+        }
+
+        .blossom {
+            position: absolute;
+            top: 20px;
+            left: 190px;
+            z-index: 20;
+            transform: scale(0.7);
+            transform-origin: 50% 50%;
+        }
+
+        .heart {
+            position: absolute;
+            left: 70px;
+            font-size: 600px;
+            transform-origin: 50% 50%;
+        }
+
+        .heart1 {
+            color: #c44646;
+        }
+
+        .heart2 {
+            color: #cf737b;
+        }
+
+        .heart3 {
+            color: #d3a9af;
+        }
+
+        .heart4 {
+            color: #c44646;
+        }
+
+        .heart5 {
+            color: #cf737b;
+        }
+
+        .heart6 {
+            color: #d3a9af;
+        }
+
+        .animation {
+            animation-name: animation;
+            animation-duration: 4.2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        .delay1 {
+            animation-delay: -0.7s;
+        }
+
+        .delay2 {
+            animation-delay: -1.4s;
+        }
+
+        .delay3 {
+            animation-delay: -2.1s;
+        }
+
+        .delay4 {
+            animation-delay: -2.8s;
+        }
+
+        .delay5 {
+            animation-delay: -3.5s;
+        }
+
+        @keyframes animation {
+            0% {
+                transform: scale(0);
+                z-index: 12;
+            }
+            17% {
+                z-index: 10;
+            }
+            34% {
+                z-index: 8;
+            }
+            51% {
+                z-index: 6;
+            }
+            68% {
+                z-index: 4;
+            }
+            85% {
+                z-index: 1;
+            }
+            100% {
+                transform: scale(3);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <img src="blossom.png" class="blossom">
+        <i class="fas fa-heart heart heart1 animation"></i>
+        <i class="fas fa-heart heart heart2 animation delay1"></i>
+        <i class="fas fa-heart heart heart3 animation delay2"></i>
+        <i class="fas fa-heart heart heart4 animation delay3"></i>
+        <i class="fas fa-heart heart heart5 animation delay4"></i>
+        <i class="fas fa-heart heart heart6 animation delay5"></i>
+    </div>
+</body>
+</html>
